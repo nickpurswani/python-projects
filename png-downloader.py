@@ -39,4 +39,5 @@ else:
     print(f"Failed to fetch the website. Status code: {response.status_code}")
 #change name for simplicity
 for i,file_name in enumerate(os.listdir()):
-    os.rename(file_name,f"{i}.png")
+    if file_name.endswith('.png'):
+        os.rename(file_name,f"{i}.png")
